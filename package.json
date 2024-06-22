@@ -7,7 +7,7 @@
       "express": "^4.17.2"
     },
     "scripts": {
-      "start": "node index.js -p 3001"
+      "start": "node index.js -p 3000"
     },
     "author": "SoulXin",
     "license": "MIT"

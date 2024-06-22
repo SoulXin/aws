@@ -24,3 +24,5 @@ server {
 sudo systemctl restart nginx
 wget https://github.com/SoulXin/aws/archive/master.zip
 sudo npm install -g pm2
+pm2 start ecosystem.config.js
+
