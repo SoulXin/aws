@@ -3,13 +3,14 @@ sudo yum install -y nodejs npm
 sudo yum install -y nginx
 sudo systemctl start nginx
 sudo systemctl enable nginx
+sudo npm install -g pm2
 sudo mkdir -p /var/www/html
-sudo chown -R ec2-user:ec2-user var
+sudo chown -R ec2-user:ec2-user /var/www
 
 # Copy this into /etc/nginx/conf/default.conf
 server {
     listen 80;
-    server_name localhost;
+    server_name server_ip;
 
     location / {
         proxy_pass http://localhost:3000;
@@ -23,6 +24,5 @@ server {
 
 sudo systemctl restart nginx
 wget https://github.com/SoulXin/aws/archive/master.zip
-sudo npm install -g pm2
 pm2 start ecosystem.config.js
 
