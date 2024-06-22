@@ -23,6 +23,6 @@ server {
 }
 
 sudo systemctl restart nginx
-wget https://github.com/SoulXin/aws/archive/master.zip
+wget https://github.com/SoulXin/aws-load-balancer/archive/master.zip
 pm2 start ecosystem.config.js
 
