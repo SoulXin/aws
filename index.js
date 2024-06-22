@@ -12,7 +12,7 @@ app.get('/check-health', (req, res) => {
   if (serverStatus) {
     res.status(200).send('Server is good');
   } else {
-    res.status(500).send('Server status changed to down');
+    res.status(500).send('Server is down');
   }
 });
 
