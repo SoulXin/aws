@@ -10,9 +10,9 @@ app.get('/', (req, res) => {
 
 app.get('/check-health', (req, res) => {
   if (serverStatus) {
-    res.send('Server is good');
+    res.status(200).send('Server is good');
   } else {
-    res.send('Server is down');
+    res.status(500).send('Server status changed to down');
   }
 });
 
